@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -52,3 +53,8 @@ export default tseslint.config({
   },
 })
 ```
+=======
+# Scaffl.ed-s-Landing-Page
+This project aims to develop scaffl.ed, an Intelligent Tutoring System (ITS) that leverages eye and mouse movement tracking technologies to enhance user experience and learning outcomes. The ITS integrates these tracking technologies to analyze user behavior and provide scaffolding feedback.
+
+>>>>>>> dbcc5892929101104433d9feae2fb48b566a15cd

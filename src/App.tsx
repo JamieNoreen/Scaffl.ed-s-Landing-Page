@@ -41,7 +41,18 @@ function App() {
             border: 'none',
             padding: '10px 20px',
             borderRadius: '4px',
+            width: '150px',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease', // Smooth hover effect
           }}
+          onMouseEnter={(e) => {
+            e.target.style.transform = 'scale(1.1)'; // Slightly enlarge the button
+            e.target.style.boxShadow = '0px 4px 10px rgba(0, 0, 0, 0.2)'; // Add shadow
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.transform = 'scale(1)'; // Reset size
+            e.target.style.boxShadow = 'none'; // Remove shadow
+          }}
+          onClick={() => alert('Try Now button clicked!')} // Optional click action
         >
           Try Now
         </Button>
@@ -70,9 +81,21 @@ function App() {
                   color: '#8C8C8C',
                   border: 'none',
                   padding: '10px 20px',
+                  borderRadius: '4px',
+                  width: '250px',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease', // Smooth hover effect
                 }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = 'scale(1.1)'; // Slightly enlarge the button
+                  e.target.style.boxShadow = '0px 4px 10px rgba(0, 0, 0, 0.2)'; // Add shadow
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = 'scale(1)'; // Reset size
+                  e.target.style.boxShadow = 'none'; // Remove shadow
+                }}
+                onClick={() => alert('Try Now button clicked!')} // Optional click action
               >
-                Get Started!
+                Try Now
               </Button>
             </Box>
             <Image
@@ -224,6 +247,15 @@ function App() {
                 borderRadius: '8px',
                 display: 'flex',
                 flexDirection: 'column',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease', // Smooth hover effect
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05)'; // Slightly enlarge the box
+                e.currentTarget.style.boxShadow = '0px 8px 15px rgba(0, 0, 0, 0.2)'; // Add shadow
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)'; // Reset size
+                e.currentTarget.style.boxShadow = 'none'; // Remove shadow
               }}
             >
               <Stack style={{ height: '100%' }}>
@@ -248,10 +280,19 @@ function App() {
                 background: 'white',
                 padding: '20px',
                 maxWidth: '350px',
-                flex: '1 1 300px',
+                flex: '1 1 300px', // Makes the box flexible and responsive
                 borderRadius: '8px',
                 display: 'flex',
                 flexDirection: 'column',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease', // Smooth hover effect
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05)'; // Slightly enlarge the box
+                e.currentTarget.style.boxShadow = '0px 8px 15px rgba(0, 0, 0, 0.2)'; // Add shadow
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)'; // Reset size
+                e.currentTarget.style.boxShadow = 'none'; // Remove shadow
               }}
             >
               <Stack style={{ height: '100%' }}>
@@ -275,10 +316,19 @@ function App() {
                 background: 'white',
                 padding: '20px',
                 maxWidth: '350px',
-                flex: '1 1 300px',
+                flex: '1 1 300px', // Makes the box flexible and responsive
                 borderRadius: '8px',
                 display: 'flex',
                 flexDirection: 'column',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease', // Smooth hover effect
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05)'; // Slightly enlarge the box
+                e.currentTarget.style.boxShadow = '0px 8px 15px rgba(0, 0, 0, 0.2)'; // Add shadow
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)'; // Reset size
+                e.currentTarget.style.boxShadow = 'none'; // Remove shadow
               }}
             >
               <Stack style={{ height: '100%' }}>
@@ -322,12 +372,23 @@ function App() {
                 style={{
                   background: 'linear-gradient(45deg, #0CA678, #AE3EC9)',
                   color: 'white',
-                  maxWidth: '200px',
                   border: 'none',
                   padding: '10px 20px',
+                  borderRadius: '4px',
+                  width: '250px',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease', // Smooth hover effect
                 }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = 'scale(1.1)'; // Slightly enlarge the button
+                  e.target.style.boxShadow = '0px 4px 10px rgba(0, 0, 0, 0.2)'; // Add shadow
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = 'scale(1)'; // Reset size
+                  e.target.style.boxShadow = 'none'; // Remove shadow
+                }}
+                onClick={() => alert('Try Now button clicked!')} // Optional click action
               >
-                Try now!
+                Try Now
               </Button>
             </Box>
           </Group>

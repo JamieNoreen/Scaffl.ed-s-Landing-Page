@@ -8,13 +8,44 @@ import mouse from './assets/mouse.png';
 import message from './assets/message.png';
 import scaffold from './assets/scaffold.png';
 import cta from './assets/cta.png';
+import logo from './assets/logo.png';
 
 
-import React from 'react'
 function App() {
 
   return (
     <>
+      <Box
+        style={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 1000,
+          background: 'white',
+          padding: '10px 20px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)',
+        }}
+      >
+        <Image
+          src={logo} // Replace with your logo image
+          alt="Scaffy Logo"
+          style={{ width: '120px' }}
+        />
+
+        <Button
+          style={{
+            background: 'linear-gradient(45deg, #0CA678, #AE3EC9)',
+            color: 'white',
+            border: 'none',
+            padding: '10px 20px',
+            borderRadius: '4px',
+          }}
+        >
+          Try Now
+        </Button>
+      </Box>
       <Stack>
         <Box style={{ background: 'linear-gradient(45deg, #0CA678, #AE3EC9)', padding: '20px', borderRadius: '8px' }}>
           <Group w='100%' wrap='nowrap' align="center" justify="center">
@@ -36,7 +67,7 @@ function App() {
               <Button
                 style={{
                   background: 'white',
-                  color: 'black',
+                  color: '#8C8C8C',
                   border: 'none',
                   padding: '10px 20px',
                 }}
@@ -52,50 +83,91 @@ function App() {
           </Group>
         </Box>
 
-        <Stack style={{ color: '#004D4D' }}>
+        <Stack
+          style={{
+            position: 'relative', // Makes the Stack the relative parent for absolute positioning
+            background: 'white', // Base white background
+            padding: '50px',
+            borderRadius: '8px',
+            overflow: 'visible', // Ensures gradient circles can extend beyond the container
+          }}
+        >
+          {/* Gradient Circle Spots */}
+          <div
+            style={{
+              position: 'absolute',
+              top: '-100px', // Adjust position
+              left: '100px',
+              width: '300px',
+              height: '300px',
+              background: 'radial-gradient(circle, rgba(108, 92, 231, 0.2), transparent 70%)',
+              borderRadius: '50%', // Makes it circular
+              zIndex: 0, // Ensures it stays behind content
+            }}
+          ></div>
+          <div
+            style={{
+              position: 'absolute',
+              bottom: '-150px', // Adjust position
+              right: '-150px',
+              width: '400px',
+              height: '400px',
+              background: 'radial-gradient(circle, rgba(46, 204, 113, 0.2), transparent 70%)',
+              borderRadius: '50%', // Makes it circular
+              zIndex: 0, // Ensures it stays behind content
+            }}
+          ></div>
+
+          {/* Main Content */}
           <Box>
-            <Group w='100%' wrap='nowrap' align="center" justify="center">
+            <Group w="100%" wrap="nowrap" align="center" justify="center">
               <Image
                 src={stuck}
                 alt="Scaffy Image"
                 style={{ width: '350px' }}
               />
-              <Box style={{
-                flex: 1,
-                marginRight: '20px',
-                maxWidth: '500px',
-                display: 'flex', // Enables flexbox
-                flexDirection: 'column', // Arranges children vertically
-                gap: '10px', // Adds spacing between children
-              }}>
+              <Box
+                style={{
+                  flex: 1,
+                  marginRight: '20px',
+                  maxWidth: '500px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '10px',
+                }}
+              >
                 <Title>
-                  <span style={{ color: '#683598' }}>Debugging</span>—every programmer’s biggest headache</Title>
-                <Text>Stuck on debugging? You’re not alone!
-                  Imagine staring at your screen,
-                  just seeing red error messages without a
-                  clue where to even begin – frustrating, right?
-                  We get it. </Text>
+                  <span style={{ color: '#683598' }}>Debugging</span>—every programmer’s biggest headache
+                </Title>
+                <Text>
+                  Stuck on debugging? You’re not alone! Imagine staring at your screen,
+                  just seeing red error messages without a clue where to even begin – frustrating, right?
+                  We get it.
+                </Text>
               </Box>
             </Group>
           </Box>
 
           <Box>
-            <Group w='100%' wrap='nowrap' align="center" justify="center">
-              <Box style={{
-                flex: 1,
-                marginRight: '20px',
-                maxWidth: '500px',
-                display: 'flex', // Enables flexbox
-                flexDirection: 'column', // Arranges children vertically
-                gap: '10px', // Adds spacing between children
-              }}>
+            <Group w="100%" wrap="nowrap" align="center" justify="center">
+              <Box
+                style={{
+                  flex: 1,
+                  marginRight: '20px',
+                  maxWidth: '500px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '10px',
+                }}
+              >
                 <Title>
-                  From <span style={{ color: '#683598' }}>'What's Wrong'</span> to <span style={{ color: '#683598' }}>'Here's How to Fix It’</span></Title>
-                <Text>Traditional platforms tell you what’s wrong—
-                  not where to look or why. In scaffl.ed,
-                  we believe in showing you the way, not just
-                  pointing at the problem,
-                  so you can truly understand and grow.</Text>
+                  From <span style={{ color: '#683598' }}>'What's Wrong'</span> to <span style={{ color: '#683598' }}>'Here's How to Fix It’</span>
+                </Title>
+                <Text>
+                  Traditional platforms tell you what’s wrong—not where to look or why. In scaffl.ed,
+                  we believe in showing you the way, not just pointing at the problem,
+                  so you can truly understand and grow.
+                </Text>
               </Box>
               <Image
                 src={feedback}
@@ -105,29 +177,30 @@ function App() {
             </Group>
           </Box>
 
-
           <Box>
-            <Group w='100%' wrap='nowrap' align="center" justify="center">
+            <Group w="100%" wrap="nowrap" align="center" justify="center">
               <Image
                 src={teacher}
                 alt="Scaffy Image"
                 style={{ width: '350px' }}
               />
-              <Box style={{
-                flex: 1,
-                marginRight: '20px',
-                maxWidth: '500px',
-                display: 'flex', // Enables flexbox
-                flexDirection: 'column', // Arranges children vertically
-                gap: '10px', // Adds spacing between children
-              }}>
+              <Box
+                style={{
+                  flex: 1,
+                  marginRight: '20px',
+                  maxWidth: '500px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '10px',
+                }}
+              >
                 <Title>
-                  Scaffl.ed is <span style={{ color: '#683598' }}>not</span> your typical coding course</Title>
-                <Text>We offer guided courses, bite-sized lessons,
-                  and hands-on activities designed to help you
-                  master debugging one step at a time.
-                  As you work through exercises,
-                  Scaffy works with you. </Text>
+                  Scaffl.ed is <span style={{ color: '#683598' }}>not</span> your typical coding course
+                </Title>
+                <Text>
+                  We offer guided courses, bite-sized lessons, and hands-on activities designed to help you
+                  master debugging one step at a time. As you work through exercises, Scaffy works with you.
+                </Text>
               </Box>
             </Group>
           </Box>

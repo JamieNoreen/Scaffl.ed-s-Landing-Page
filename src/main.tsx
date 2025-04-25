@@ -13,7 +13,7 @@ root.render(
       withGlobalStyles
       withNormalizeCSS
       theme={{
-        fontFamily: 'Inter, sans-serif',
+        fontFamily: 'Poppins, sans-serif',
       }}
     >
       <App />

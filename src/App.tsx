@@ -1,11 +1,12 @@
 import './App.css'
-import { Button, Title, Flex, Image, Text, Box } from '@mantine/core';
+import { Button, Title, Flex, Image, Text, Box, Group } from '@mantine/core';
 import stuck from './assets/stuck.png';
 import feedback from './assets/feedback.png';
 import teacher from './assets/teacher.png';
 import eye from './assets/eye.png';
 import mouse from './assets/mouse.png';
 import message from './assets/message.png';
+import scaffold from './assets/scaffold.png';
 
 
 import React from 'react'
@@ -14,37 +15,32 @@ function App() {
   return (
     <>
       <Flex>
-        <Box style={{ backgroundColor: '#f0f0f0', padding: '20px', borderRadius: '8px' }}>
-          <Flex direction="row" align="center" justify="space-between">
-            <Box style={{ flex: 1, marginRight: '20px' }}>
-              <Title>Scaffy-Your Debugging Buddy</Title>
-              <Text>
+        <Box style={{ background: 'linear-gradient(45deg, #0CA678, #AE3EC9)', padding: '20px', borderRadius: '8px' }}>
+          <Group w='100%' wrap='nowrap' align="center" justify="flex-start">
+            <Box style={{ flex: 1, marginRight: '20px', color: 'white', maxWidth: '500px' }}>
+              <Title>
+                <span style={{ color: '#B69CD0' }}>Scaffy</span>-Your Debugging Buddy</Title>
+              <Text >
                 Scaffy uses your gaze & clicks to give real-time debugging feedback—just
                 as scaffolds help builders reach higher, Scaffy helps coders understand deeper.
               </Text>
               <Button
                 style={{
-                  background: 'linear-gradient(to right, teal, purple)',
-                  color: 'white',
+                  background: 'white',
+                  color: 'black',
                   border: 'none',
+                  padding: '10px 20px',
                 }}
               >
                 Get Started!
               </Button>
             </Box>
-            <Box style={{ flex: 1 }}>
-              <Image
-                src={stuck}
-                alt="Scaffy Image"
-                style={{ width: '350px' }}
-              />
-              <Image
-                src="https://via.placeholder.com/150"
-                alt="Scaffy Image"
-                style={{ marginTop: '10px' }}
-              />
-            </Box>
-          </Flex>
+            <Image
+              src={scaffold}
+              alt="Scaffy Image"
+              style={{ width: '100px' }}
+            />
+          </Group>
         </Box>
         <Flex>
           <Box>
@@ -146,7 +142,7 @@ function App() {
             </Box>
           </Flex>
         </Box>
-      </Flex>
+      </Flex >
     </>
   )
 }

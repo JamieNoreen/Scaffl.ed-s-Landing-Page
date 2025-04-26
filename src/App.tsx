@@ -57,7 +57,7 @@ function App() {
           Try Now
         </Button>
       </Box>
-      <Stack>
+      <Stack style={{ overflow: 'hidden' }}>
         <Box style={{ background: 'linear-gradient(45deg, #0CA678, #AE3EC9)', padding: '20px', borderRadius: '8px' }}>
           <Group w='100%' wrap='nowrap' align="center" justify="center">
             <Box style={{
@@ -119,11 +119,11 @@ function App() {
           <div
             style={{
               position: 'absolute',
-              top: '-100px', // Adjust position
-              left: '100px',
-              width: '300px',
-              height: '300px',
-              background: 'radial-gradient(circle, rgba(108, 92, 231, 0.2), transparent 70%)',
+              top: '-1000px', // Adjust position
+              left: '800px',
+              width: '1500px',
+              height: '1500px',
+              background: 'radial-gradient(circle, rgba(108, 92, 231, 0.7), transparent 50%)',
               borderRadius: '50%', // Makes it circular
               zIndex: 0, // Ensures it stays behind content
             }}
@@ -131,11 +131,23 @@ function App() {
           <div
             style={{
               position: 'absolute',
-              bottom: '-150px', // Adjust position
-              right: '-150px',
-              width: '400px',
-              height: '400px',
-              background: 'radial-gradient(circle, rgba(46, 204, 113, 0.2), transparent 70%)',
+              top: '-100px', // Adjust position
+              left: '-1000px',
+              width: '1500px',
+              height: '1500px',
+              background: 'radial-gradient(circle, rgba(46, 204, 113, 0.7), transparent 50%)',
+              borderRadius: '50%', // Makes it circular
+              zIndex: 0, // Ensures it stays behind content
+            }}
+          ></div>
+          <div
+            style={{
+              position: 'absolute',
+              top: '500px', // Adjust position
+              left: '1000px',
+              width: '1500px',
+              height: '1500px',
+              background: 'radial-gradient(circle, rgba(108, 92, 231, 0.7), transparent 50%)',
               borderRadius: '50%', // Makes it circular
               zIndex: 0, // Ensures it stays behind content
             }}
@@ -147,7 +159,7 @@ function App() {
               <Image
                 src={stuck}
                 alt="Scaffy Image"
-                style={{ width: '350px' }}
+                style={{ width: '450px' }}
               />
               <Box
                 style={{
@@ -195,7 +207,7 @@ function App() {
               <Image
                 src={feedback}
                 alt="Scaffy Image"
-                style={{ width: '350px' }}
+                style={{ width: '450px' }}
               />
             </Group>
           </Box>
@@ -205,7 +217,7 @@ function App() {
               <Image
                 src={teacher}
                 alt="Scaffy Image"
-                style={{ width: '350px' }}
+                style={{ width: '450px' }}
               />
               <Box
                 style={{
